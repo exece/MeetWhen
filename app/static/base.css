@@ -1,0 +1,46 @@
+html {
+  font-family: "Saira Condensed", sans-serif;
+}
+.navbar {
+  background-color: #004369;
+}
+
+.nav-option {
+  color: #e9eaec;
+  Text-Decoration: None;
+}
+
+.nav-option:hover {
+  color: white;
+  animation-name: borderBottomFill;
+  animation-duration: 5s;
+}
+
+.logo {
+  height:32px;
+}
+
+.main,
+body {
+    margin: 5% 15%;
+}
+
+.form-group {
+  margin-bottom: 6px;
+}
+
+@keyframes borderBottomFill {
+  0% {
+    border-bottom: solid #e9eaec;
+    border-bottom-width: thin;
+  }
+  
+  80% {
+    border-bottom: 1px solid #e9eaec;
+  }
+
+  100% {
+    border-bottom: solid #e9eaec;
+    border-bottom-width: thick;
+  }
+}

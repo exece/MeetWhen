@@ -1,0 +1,21 @@
+.jumbotron {
+    background-image: linear-gradient(to right bottom, #d3e2d1e7, #daa94fd5), url("../static/img/hotel-water.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content-row__item {
+    margin: 20px;
+}
+
+

@@ -1,0 +1,12 @@
+.destination {
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-photo-main {
+    align-self: center;
+}
+
+.destination-gallery {
+    
+}
