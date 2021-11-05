@@ -1,9 +1,50 @@
 {% extends "base.html" %} 
-{% block header %}
+{% block header %} 
 {% endblock %} 
-
 {% block content %}
 <div class="main">
-    CREATE
+  {{input_type}}
+  <form method="POST" action="">
+    {{ input_type_form.hidden_tag() }}
+    <div class="form-group">
+      {{ input_type_form.calander(class="btn btn-primary") }}
+    </div>
+    <div class="form-group">
+      {{ input_type_form.week(class="btn btn-primary") }}
+    </div>
+  </form>
+
+  {% if input_type==0 %}
+  <!-- Calander Form -->
+  <div class="form-section">
+    <form method="POST" action="">
+      {{ form_cal.csrf_token }}
+      <div class="form-group">
+        {{ form_cal.event_title.label() }} {{
+        form_cal.event_title(class="form-control form-control-lg", placeholder="Event Title") }}
+      </div>
+
+      <div class="form-group">
+        {{ form_cal.date(class="form-control form-control-lg") }}
+      </div>
+      {{ form_cal.submit(class="btn btn-success") }}
+    </form>
+  </div>
+  {% endif %} {% if input_type==1 %}
+  <div class="form-section">
+    <form method="POST" action="">
+      {{ form_week.csrf_token }}
+      <div class="form-group">
+        {{ form_week.event_title.label() }} {{
+        form_week.event_title(class="form-control form-control-lg", placeholder="Event Title") }}
+      </div>
+      <div class="form-group">
+        {{ form_week.days.label() }}
+        {{ form_week.days(size=10, class='form-control', multiple="multiple") }}
+      </div>
+      {{ form_week.submit(class="btn btn-success") }}
+    </form>
+  </div>
+  {% endif %}
 </div>
 {% endblock %}

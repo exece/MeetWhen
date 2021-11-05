@@ -1,9 +1,13 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
 from flask_bootstrap import Bootstrap
 
+db=SQLAlchemy()
 
 def create_app():
     app=Flask(__name__)
+
 
     #we use this utility module to display forms quickly
     bootstrap = Bootstrap(app)
